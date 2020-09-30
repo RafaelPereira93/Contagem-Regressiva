@@ -1,0 +1,270 @@
+@font-face {
+  font-family: digitalFont;
+  src: url(../digital-font/DS-DIGIB.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fffbf2;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper-countdown {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 10px;
+  background-color: #000;
+  color: #fffbf2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 50px auto;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+p {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.3em;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  display: block;
+  width: 80%;
+  border: none;
+  border: 3px solid #000;
+  padding: 10px;
+  transition: 0.3s;
+  font-size: 1.1em;
+}
+
+input:focus {
+  outline: none;
+  border-color: #af2b2b;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+  outline: none;
+}
+
+.box-countdown {
+  margin: 50px auto;
+  animation: animaCountdown 0.3s forwards;
+}
+
+.box-countdown.d-none {
+  display: none;
+}
+
+.box-countdown h3 {
+  text-align: center;
+  font-size: 1.3em;
+  margin: 30px auto;
+}
+
+.box-countdown h4 {
+  margin: 50px auto;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+[data-set="days"],
+[data-set="hours"],
+[data-set="minutes"],
+[data-set="seconds"] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 30px;
+  color: #af2b2b;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  text-align: center;
+  font-family: digitalFont;
+  font-size: 5em;
+}
+
+.days-name,
+.hours-name,
+.minutes-name,
+.seconds-name {
+  color: #000;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dica {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dica.d-none {
+  display: none;
+}
+
+.box-dica {
+  width: 50%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 10px solid #af2b2b;
+  position: relative;
+  animation: animaDica 0.5s forwards;
+}
+
+.box-dica h3,
+.box-dica p {
+  color: #fffbf2;
+}
+
+.box-dica h3 {
+  text-align: center;
+}
+
+.box-dica h3:after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: #fffbf2;
+  margin: 10px auto;
+}
+
+.box-dica p {
+  font-size: 1em;
+  text-align: left;
+}
+
+.fechar-dica {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #fffbf2;
+  border-radius: 50%;
+  font-size: 1.8em;
+  font-weight: bold;
+  box-shadow: 0 0 0 6px #af2b2b, 0 0 0 8px #fffbf2;
+  position: absolute;
+  top: -20px;
+  left: -35px;
+}
+
+.exemplo-data {
+  display: inline-block;
+}
+
+.exemplo-data:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fffbf2;
+}
+
+.erro {
+  margin: 20px auto;
+  padding: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
+  animation: animaDataInvalida cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s
+    forwards;
+}
+
+.erro h3 {
+  color: #af2b2b;
+  text-align: center;
+  font-size: 1em;
+}
+
+.erro.d-none {
+  display: none;
+}
+
+@keyframes animaDataInvalida {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: initial;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animaDica {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animaCountdown {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    visibility: initial;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 950px) {
+  .box-dica {
+    width: 90%;
+    padding: 15px 5px;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contagem Regressiva</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper-countdown">
+      <h1>Contagem regressiva</h1>
+      <p>
+        Digite uma data futura e veja quantos dias, horas, minutos e segundos
+        faltam para chegar essa data.
+      </p>
+
+      <form>
+        <input
+          type="text"
+          data-js="date"
+          placeholder="Dec 25 2026 23:59:00"
+        />
+        <button><img src="./img/send.png" alt=""></button>
+      </form>
+
+      <div class="erro d-none">
+        <h3>Digite uma data válida</h3>
+      </div>
+
+      <div class="box-countdown d-none"></div>
+    </div>
+
+    <div class="dica" data-dica="fechar">
+      <div class="box-dica">
+        <h3>Dicas para inserção de data</h3>
+        <p>Mês: O mês tem que ser digitado em inglês, com as três primeiras letras apenas, exemplos: Jan, Feb, Mar, Apr...</p>
+        <p>Dia: O dia tem que ser digitado até o dia limite do mês que vc está inserindo.</p>
+        <p>Ano: O ano tem que ser digitado normalmente: 2020, 2021, 2022 etc ...</p>
+        <p>Hora: Você também tem opção de informar a hora do dia que quiser, exemplo: 13:59:00. Hora:Minuto:Segundo (separados por dois pontos)</p>
+        <p>No final a data deverá ser semelhante a este formato: <span class="exemplo-data">Dec 20 2020 13:00:00</span></p>
+        <button class="fechar-dica" data-dica="fechar">X</button>
+      </div>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
