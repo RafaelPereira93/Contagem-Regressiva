@@ -13,6 +13,7 @@ html,
 body {
   background-color: #fffbf2;
   font-family: "Poppins", sans-serif;
+  height: auto;
 }
 
 .wrapper-countdown {
@@ -379,5 +380,39 @@ button {
 
   .box-countdown h4 {
     font-size: 1em;
+  }
+
+  .dica {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+
+  .box-dica {
+    width: 95%;
+    height: auto;
+    padding: 50px 5px;
+    border: 2px solid #af2b2b;
+    overflow: hidden;
+    margin: 0 10px;
+  }
+
+  .box-dica h3 {
+    font-size: 1em;
+  }
+
+  .box-dica p {
+    font-size: 0.9em;
+  }
+
+  .fechar-dica {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5em;
+    top: 10px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 3px #af2b2b, 0 0 0 3px #fffbf2;
   }
 }
